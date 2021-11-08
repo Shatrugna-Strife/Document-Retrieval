@@ -13,7 +13,7 @@ autocorrect</br>
 1) Library used nltk, re, csv.</br>
 2) Text cleaning and punctuation removal is done with re and the tokenization
 is done with nltk.
-3) In part 1 an inverted index is built from the corpus in the form of a
+3) In main.py an inverted index is built from the corpus in the form of a
 dictionary. And the doc id along with its respective title is stored in another
 array.</br>
 4) The processed corpus is converted to Inverted index and stored in a csv file
@@ -26,7 +26,7 @@ model, giving out results.</br>
 used to implement the issues correction we have noticed within the code
 of the implementation.</br>
 
-## IMPROVEMENTS IN PART 1
+## IMPROVEMENTS TO main.py
 ISSUE 1</br>
 1) HIGH LATENCY - Score computation is a large (10s of %) fraction of the, CPU
 work on a query, Generally, we have a tight budget on latency We’ll look at
@@ -60,7 +60,7 @@ it will increase the probability of extracting more relevant documents.</br>
 ![image](https://user-images.githubusercontent.com/54111714/140654024-9fc694fa-be43-4765-b4c3-08a61a1472e4.png)
 
 ## ISSUE 3
-1) The IR system in part 1 has no way to check whether the entered term of
+1) The IR system in main.py has no way to check whether the entered term of
 the query is correct in spelling. This results in unexpected consequences in
 the final output.</br>
 2) A spell corrector can be implemented using many dependable open source
@@ -72,8 +72,9 @@ query processing to correct results.</br>
 incorrectly entered term. This might cause the IR system to give an overall
 different result to the query.</br>
 
+
 | Before correction | After correction |
 | --- | --- |
-| <img src="https://user-images.githubusercontent.com/54111714/140654067-7026870d-90c2-4e96-92cc-bad14e85f37a.png" align="left"> | <img src="https://user-images.githubusercontent.com/54111714/140654067-7026870d-90c2-4e96-92cc-bad14e85f37a.png" align="right"> |
-| <img src="https://user-images.githubusercontent.com/54111714/140654084-2bf615e1-2cd8-4700-ac10-82038d5871a7.png" align="left"> | <img src="https://user-images.githubusercontent.com/54111714/140654103-88a08c56-542a-482f-a7da-6c254570dc0b.png" align="right"> |
-| <img src="https://user-images.githubusercontent.com/54111714/140654105-096e533c-3b38-44b6-8276-e4c0a1094768.png" align="left"> | <img src="https://user-images.githubusercontent.com/54111714/140654110-4f7fd8a4-ed5f-4a13-801f-509a5ea7fbde.png" align="right"> |
+| <img src="https://user-images.githubusercontent.com/54111714/140654067-7026870d-90c2-4e96-92cc-bad14e85f37a.png" align="left"> | <img src="https://user-images.githubusercontent.com/54111714/140654103-88a08c56-542a-482f-a7da-6c254570dc0b.png" align="right"> |
+| <img src="https://user-images.githubusercontent.com/54111714/140654105-096e533c-3b38-44b6-8276-e4c0a1094768.png" align="left"> | <img src="https://user-images.githubusercontent.com/54111714/140654084-2bf615e1-2cd8-4700-ac10-82038d5871a7.png" align="right"> |
+| <img src="https://user-images.githubusercontent.com/54111714/140680250-5064f00e-c67a-4425-9ea5-aa7d887a9b40.png" align="left"> | <img src="https://user-images.githubusercontent.com/54111714/140654110-4f7fd8a4-ed5f-4a13-801f-509a5ea7fbde.png" align="right"> |
